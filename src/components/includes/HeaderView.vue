@@ -39,9 +39,9 @@
             <div class="col-lg-4 col-md-4 col-12">
               <div class="top-middle">
                 <ul class="useful-links">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="about-us.html">About Us</a></li>
-                  <li><a href="contact.html">Contact Us</a></li>
+                  <li><router-link :to="{name : 'home'}">Home</router-link></li>
+                  <li><router-link :to="{name : 'about'}">About Us</router-link></li>
+                  <li><router-link :to="{name : 'contact'}">Contact Us</router-link></li>
                 </ul>
               </div>
             </div>
@@ -53,10 +53,10 @@
                 </div>
                 <ul class="user-login">
                   <li>
-                    <a href="login.html">Sign In</a>
+                    <router-link :to="{name : 'login'}">Sign In</router-link>
                   </li>
                   <li>
-                    <a href="register.html">Register</a>
+                    <router-link :to="{name : 'register'}">Register</router-link>
                   </li>
                 </ul>
               </div>
@@ -71,9 +71,9 @@
           <div class="row align-items-center">
             <div class="col-lg-3 col-md-3 col-7">
 
-              <a class="navbar-brand" href="index.html">
-                <img src="assets/images/logo/logo.svg" alt="Logo">
-              </a>
+              <router-link class="navbar-brand" :to="{name : 'home'}">
+                <img src="/assets/images/logo/logo.svg" alt="Logo">
+              </router-link>
 
             </div>
             <div class="col-lg-5 col-md-7 d-xs-none">
@@ -195,17 +195,8 @@
                       <li><a href="product-grids.html">Cables & Adapters</a></li>
                     </ul>
                   </li>
-                  <li><a href="product-grids.html">accessories</a></li>
-                  <li><a href="product-grids.html">Televisions</a></li>
-                  <li><a href="product-grids.html">best selling</a></li>
-                  <li><a href="product-grids.html">top 100 offer</a></li>
-                  <li><a href="product-grids.html">sunglass</a></li>
-                  <li><a href="product-grids.html">watch</a></li>
-                  <li><a href="product-grids.html">man’s product</a></li>
-                  <li><a href="product-grids.html">Home Audio & Theater</a></li>
-                  <li><a href="product-grids.html">Computers & Tablets </a></li>
-                  <li><a href="product-grids.html">Video Games </a></li>
-                  <li><a href="product-grids.html">Home Appliances </a></li>
+
+                  <li><router-link :to="{name: 'category'}">accessories</router-link></li>
                 </ul>
               </div>
 
@@ -219,14 +210,14 @@
                 <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                   <ul id="nav" class="navbar-nav ms-auto">
                     <li class="nav-item">
-                      <a href="index.html" class="active" aria-label="Toggle navigation">Home</a>
+                      <router-link :to="{name : 'home'}" class="active" aria-label="Toggle navigation">Home</router-link>
                     </li>
                     <li class="nav-item">
                       <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Pages</a>
                       <ul class="sub-menu collapse" id="submenu-1-2">
                         <li class="nav-item"><a href="about-us.html">About Us</a></li>
                         <li class="nav-item"><a href="faq.html">Faq</a></li>
-                        <li class="nav-item"><a href="login.html">Login</a></li>
+                        <li class="nav-item"><a href="">Login</a></li>
                         <li class="nav-item"><a href="register.html">Register</a></li>
                         <li class="nav-item"><a href="mail-success.html">Mail Success</a></li>
                         <li class="nav-item"><a href="404.html">404 Error</a></li>

@@ -41,8 +41,34 @@
 </template>
 
 <script>
+import {tns} from 'tiny-slider/src/tiny-slider'
 export default {
-  name: "BrandView"
+  name: "BrandView",
+  mounted() {
+    tns({
+      container: '.brands-logo-carousel',
+      autoplay: true,
+      autoplayButtonOutput: false,
+      mouseDrag: true,
+      gutter: 15,
+      nav: false,
+      controls: false,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        540: {
+          items: 3,
+        },
+        768: {
+          items: 5,
+        },
+        992: {
+          items: 6,
+        }
+      }
+    });
+  }
 }
 </script>
 

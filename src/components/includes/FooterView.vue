@@ -8,9 +8,9 @@
             <div class="row">
               <div class="col-lg-3 col-md-4 col-12">
                 <div class="footer-logo">
-                  <a href="index.html">
-                    <img src="assets/images/logo/white-logo.svg" alt="#">
-                  </a>
+                  <router-link :to="{name : 'home'}">
+                    <img src="/assets/images/logo/white-logo.svg" alt="#">
+                  </router-link>
                 </div>
               </div>
               <div class="col-lg-9 col-md-8 col-12">
@@ -82,7 +82,7 @@
                 <div class="single-footer f-link">
                   <h3>Information</h3>
                   <ul>
-                    <li><a href="javascript:void(0)">About Us</a></li>
+                    <li><router-link :to="{name : 'about'}">About Us</router-link></li>
                     <li><a href="javascript:void(0)">Contact Us</a></li>
                     <li><a href="javascript:void(0)">Downloads</a></li>
                     <li><a href="javascript:void(0)">Sitemap</a></li>
@@ -118,12 +118,12 @@
               <div class="col-lg-4 col-12">
                 <div class="payment-gateway">
                   <span>We Accept:</span>
-                  <img src="assets/images/footer/credit-cards-footer.png" alt="#">
+                  <img src="/assets/images/footer/credit-cards-footer.png" alt="#">
                 </div>
               </div>
               <div class="col-lg-4 col-12">
                 <div class="copyright">
-                  <p>Designed and Developed by<a href="https://graygrids.com/" rel="nofollow" target="_blank">GrayGrids</a></p>
+                  <p>Designed and Developed by<a target="_blank">Raresoft</a></p>
                 </div>
               </div>
               <div class="col-lg-4 col-12">
