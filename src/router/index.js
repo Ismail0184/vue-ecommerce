@@ -31,6 +31,11 @@ const routes = [
     path: '/customer/register',
     name: 'register',
     component: () => import(/* webpackChunkName: "register" */ '../views/RegisterView.vue')
+  },
+  {
+    path: '/customer/account-password-recovery',
+    name: 'forgetpassword',
+    component: () => import(/* webpackChunkName: "forgetpassword" */ '../views/AccountPasswordRecoveryView.vue')
   }
 ]
 
