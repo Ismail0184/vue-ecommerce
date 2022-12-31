@@ -36,6 +36,11 @@ const routes = [
     path: '/customer/account-password-recovery',
     name: 'forgetpassword',
     component: () => import(/* webpackChunkName: "forgetpassword" */ '../views/AccountPasswordRecoveryView.vue')
+  },
+  {
+    path: '/checkout',
+    name: 'checkout',
+    component: () => import(/* webpackChunkName: "checkout" */ '../views/CheckoutView.vue')
   }
 ]
 

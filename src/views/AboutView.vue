@@ -156,3 +156,11 @@
     </section>
   </div>
 </template>
+
+<script>
+export default {
+  created() {
+    document.title = "About Page"
+  }
+}
+</script>

@@ -115,9 +115,13 @@
   </div>
 </template>
 
+
 <script>
 export default {
-  name: "ContactView"
+  name: "ContactView",
+  created() {
+    document.title = "Contact Page"
+  }
 }
 </script>
 

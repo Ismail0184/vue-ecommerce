@@ -30,8 +30,13 @@ export default {
   components: {
     ShippingInfoView,
     OurLatestNews,
-    BrandView, ProductListView, SpecialOfferView, BannerView, TrendingView, FeaturedView, HeroView}
+    BrandView, ProductListView, SpecialOfferView, BannerView, TrendingView, FeaturedView, HeroView},
+
+  created() {
+    document.title = "Best Ecommerce website in Bangladesh"
+  }
 }
+
 </script>
 
 <style>
