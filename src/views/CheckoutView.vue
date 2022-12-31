@@ -357,7 +357,10 @@
 
 <script>
 export default {
-  name: "CheckoutView"
+  name: "CheckoutView",
+  created() {
+    document.title = "Checkout"
+  }
 }
 </script>
 

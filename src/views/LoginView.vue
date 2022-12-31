@@ -74,7 +74,10 @@
 
 <script>
 export default {
-  name: "LoginView"
+  name: "LoginView",
+  created() {
+    document.title = "Login Here"
+  }
 }
 </script>
 

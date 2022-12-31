@@ -82,7 +82,10 @@
 
 <script>
 export default {
-  name: "RegisterView"
+  name: "RegisterView",
+  created() {
+    document.title = "Register Here"
+  }
 }
 </script>
 
