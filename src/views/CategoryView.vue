@@ -1,9 +1,6 @@
 <template>
+  <PageTitle/>
   <div class="category-view">
-
-
-
-
     <section class="product-grids section">
       <div class="container">
         <div class="row">
@@ -143,6 +140,8 @@
 
           </div>
           <div class="col-lg-9 col-12">
+            <RightSection/>
+
 
           </div>
         </div>
@@ -152,8 +151,14 @@
 </template>
 
 <script>
+import PageTitle from "@/components/category/PageTitle";
+import RightSection from "@/components/category/RightSection";
 export default {
-  name: "CategoryView"
+  name: "CategoryView",
+  components: {RightSection, PageTitle},
+  created() {
+    document.title = "Category"
+  }
 }
 </script>
 

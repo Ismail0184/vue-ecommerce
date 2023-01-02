@@ -69,7 +69,7 @@
                 <div class="button">
                   <button class="btn" type="submit">Register</button>
                 </div>
-                <p class="outer-link">Already have an account? <a href="login.html">Login Now</a>
+                <p class="outer-link">Already have an account? <router-link :to="{name : 'login'}">Login Now</router-link>
                 </p>
               </form>
             </div>

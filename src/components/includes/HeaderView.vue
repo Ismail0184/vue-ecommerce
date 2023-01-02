@@ -1,7 +1,6 @@
 <template>
   <div class="header">
     <header class="header navbar-area">
-
       <div class="topbar">
         <div class="container">
           <div class="row align-items-center">
@@ -159,7 +158,7 @@
                           <span class="total-amount">$134.00</span>
                         </div>
                         <div class="button">
-                          <a href="checkout.html" class="btn animate">Checkout</a>
+                          <router-link :to="{name : 'checkout'}" class="btn animate">Checkout</router-link>
                         </div>
                       </div>
                     </div>
@@ -181,22 +180,11 @@
               <div class="mega-category-menu">
                 <span class="cat-button"><i class="lni lni-menu"></i>All Categories</span>
                 <ul class="sub-category">
-                  <li><a href="product-grids.html">Electronics <i class="lni lni-chevron-right"></i></a>
+                  <li v-for="(category,key) in categories" :key="key"><router-link :to="{name : 'category'}">{{category.name}} <i class="lni lni-chevron-right"></i></router-link>
                     <ul class="inner-sub-category">
                       <li><a href="product-grids.html">Digital Cameras</a></li>
-                      <li><a href="product-grids.html">Camcorders</a></li>
-                      <li><a href="product-grids.html">Camera Drones</a></li>
-                      <li><a href="product-grids.html">Smart Watches</a></li>
-                      <li><a href="product-grids.html">Headphones</a></li>
-                      <li><a href="product-grids.html">MP3 Players</a></li>
-                      <li><a href="product-grids.html">Microphones</a></li>
-                      <li><a href="product-grids.html">Chargers</a></li>
-                      <li><a href="product-grids.html">Batteries</a></li>
-                      <li><a href="product-grids.html">Cables & Adapters</a></li>
                     </ul>
                   </li>
-
-                  <li><router-link :to="{name: 'category'}">accessories</router-link></li>
                 </ul>
               </div>
 
@@ -281,8 +269,20 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
-  name: "HeaderView"
+  name: "HeaderView",
+  data() {
+    return{
+      categories : []
+    }
+  },
+  created() {
+    axios.get('http://127.0.0.1:8000/api/allcategory').then(response =>
+    {
+      this.categories = response.data;
+    })
+  }
 }
 </script>
 
